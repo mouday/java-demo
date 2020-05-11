@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<web-app>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.pengshiyu.servlet.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>VerifyCodeServlet</servlet-name>
+        <servlet-class>com.pengshiyu.servlet.VerifyCodeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>VerifyCodeServlet</servlet-name>
+        <url-pattern>/code</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>BookServlet</servlet-name>
+        <url-pattern>/book</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>BookServlet</servlet-name>
+        <servlet-class>com.pengshiyu.servlet.BookServlet</servlet-class>
+    </servlet>
+
+
+<!--    <filter>-->
+<!--        <filter-name>EncodingFilter</filter-name>-->
+<!--        <filter-class>com.pengshiyu.filter.EncodingFilter</filter-class>-->
+<!--    </filter>-->
+<!--    <filter-mapping>-->
+<!--        <filter-name>EncodingFilter</filter-name>-->
+<!--        <url-pattern>/*</url-pattern>-->
+<!--    </filter-mapping>-->
+
+<!--    <filter>-->
+<!--        <filter-name>CacheFilter</filter-name>-->
+<!--        <filter-class>com.pengshiyu.filter.CacheFilter</filter-class>-->
+<!--    </filter>-->
+<!--    <filter-mapping>-->
+<!--        <filter-name>CacheFilter</filter-name>-->
+<!--        <url-pattern>/book</url-pattern>-->
+<!--    </filter-mapping>-->
+
+<!--    <listener>-->
+<!--        <listener-class>com.pengshiyu.listener.AListener</listener-class>-->
+<!--    </listener>-->
+
+
+</web-app>

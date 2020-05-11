@@ -1,0 +1,10 @@
+<%
+String username =(String)session.getAttribute("username");
+if(username == null){
+    response.sendRedirect("/login.jsp")
+}
+%>
+
+<h2>欢迎<%=username%></h2>
+
+
