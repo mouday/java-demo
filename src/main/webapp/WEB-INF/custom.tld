@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<taglib>
+    <tlib-version>1.0</tlib-version>
+    <jsp-version>2.0</jsp-version>
+    <short-name>Example TLD with Body</short-name>
+
+    <tag>
+        <name>Hello</name>
+        <tag-class>com.pengshiyu.taglibs.HelloTag</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+<!--            属性名称-->
+            <name>name</name>
+<!--            是否可选-->
+            <required>true</required>
+<!--            支持表达式-->
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+</taglib>

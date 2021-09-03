@@ -3,8 +3,22 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.pengshiyu.mybatis.bean.StudentMapper">
-    <select id="selectStudent" resultType="Student">
+<mapper namespace="com.pengshiyu.mybatis.entity.StudentMapper">
+    <select id="getById" resultType="com.pengshiyu.mybatis.entity.Student">
         select * from students where id = #{id}
     </select>
+
+    <select id="selectAll" resultType="com.pengshiyu.mybatis.entity.Student">
+        select * from students
+    </select>
+
+    <update id="updateById" parameterType="com.pengshiyu.mybatis.entity.Student">
+        update students set age = #{age} where id = #{id}
+    </update>
+
+    <delete id="deleteById" parameterType="com.pengshiyu.mybatis.entity.Student">
+        <!-- 故意将sql写错，触发事务管理-->
+        deletes from students where id = #{id}
+    </delete>
+
 </mapper>

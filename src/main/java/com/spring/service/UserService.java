@@ -1,4 +1,6 @@
 package com.spring.service;
 
-public class UserService {
+public interface UserService {
+    public void add();
+    public void delete();
 }

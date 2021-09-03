@@ -1,9 +1,27 @@
-package com.pengshiyu.mybatis.bean;
+package com.pengshiyu.mybatis.entity;
 
 public class Student {
     private int id;
     private String name;
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     private int age;
+    private Teacher teacher;
+
+    public Teacher getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
+    }
 
     public int getId() {
         return id;
@@ -21,20 +39,12 @@ public class Student {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     @Override
     public String toString() {
         return "Student{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", age=" + age +
+                ", teacher=" + teacher +
                 '}';
     }
 }

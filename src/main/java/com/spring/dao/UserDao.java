@@ -1,5 +1,5 @@
 package com.spring.dao;
 
-public interface Dao {
+public interface UserDao {
     public void getUser();
 }

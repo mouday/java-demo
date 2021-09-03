@@ -1,5 +1,5 @@
 package com.pengshiyu.proxy;
 
-public interface IVehical {
+public interface IVehicle {
     void run();
 }

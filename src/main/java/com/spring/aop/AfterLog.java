@@ -1,13 +1,13 @@
 package com.spring.aop;
 
-import org.springframework.aop.MethodBeforeAdvice;
+import org.springframework.aop.AfterReturningAdvice;
 
 import java.lang.reflect.Method;
 
-// 前置通知
-public class BeforeLog implements MethodBeforeAdvice {
+// 后置通知
+public class AfterLog implements AfterReturningAdvice {
     @Override
-    public void before(Method method, Object[] args, Object target) throws Throwable {
+    public void afterReturning(Object result, Method method, Object[] objects, Object target) throws Throwable {
         System.out.println(target.getClass().getName() + ": "+ method.getName());
     }
 }

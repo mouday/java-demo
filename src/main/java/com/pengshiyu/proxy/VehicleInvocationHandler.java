@@ -1,15 +1,13 @@
 package com.pengshiyu.proxy;
 
-import org.omg.CORBA.OBJ_ADAPTER;
-
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
-public class VehicalInvacationHandler implements InvocationHandler {
+public class VehicleInvocationHandler implements InvocationHandler {
 
     private Object target;
 
-    public VehicalInvacationHandler(Object target){
+    public VehicleInvocationHandler(Object target){
         this.target = target;
     }
 

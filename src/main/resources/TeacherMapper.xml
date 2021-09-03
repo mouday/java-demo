@@ -3,20 +3,23 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.pengshiyu.mybatis.entity.StudentMapper">
-    <select id="selectAllStudent" resultMap="StudentTeacher">
-        select * from students
+<mapper namespace="com.pengshiyu.mybatis.entity.TeacherMapper">
+    <select id="selectOneTeacher" resultMap="TeacherStudent">
+        select *
+        from teachers
+        where id = #{id}
     </select>
 
-    <resultMap id="StudentTeacher" type="Student">
-        <!-- 关联对象-->
-        <association property="teacher" column="teacher_id" javaType="Teacher" select="getTeacher">
-            <id column="tid" property="id"/>
-            <result column="tname" property="name"/>
-        </association>
+    <resultMap id="TeacherStudent" type="com.pengshiyu.mybatis.entity.Teacher">
+
+        <!-- 关联集合 -->
+        <!-- column 是外键 -->
+        <collection property="students" column="id" ofType="com.pengshiyu.mybatis.entity.Student"
+                    select="getStudentByTeacherId">
+        </collection>
     </resultMap>
 
-    <select id="getTeacher" resultType="Teacher">
-        select * from teachers where id = #{id}
+    <select id="getStudentByTeacherId" resultType="com.pengshiyu.mybatis.entity.Student">
+        select * from students where teacher_id = #{id}
     </select>
 </mapper>

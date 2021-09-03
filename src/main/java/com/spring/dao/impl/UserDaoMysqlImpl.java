@@ -1,4 +1,4 @@
-package com.spring.daoimpl;
+package com.spring.dao.impl;
 
 import com.spring.dao.UserDao;
 

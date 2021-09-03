@@ -1,20 +1,21 @@
 package com.pengshiyu.mybatis.dao;
 
 import com.pengshiyu.mybatis.entity.Student;
+import com.pengshiyu.mybatis.entity.Teacher;
 import com.pengshiyu.mybatis.util.MyBatisUtil;
 import org.apache.ibatis.session.SqlSession;
 
 import java.io.IOException;
 import java.util.List;
 
-public class StudentDao {
+public class TeacherDao {
 
-    public List<Student> selectAll() throws IOException {
+    public Teacher selectOne(int id) throws IOException {
         SqlSession session = MyBatisUtil.getSqlSession();
-        List<Student> students = session.selectList(
-                "com.pengshiyu.mybatis.entity.StudentMapper.selectAllStudent");
+        Teacher teacher = session.selectOne(
+                "com.pengshiyu.mybatis.entity.TeacherMapper.selectOneTeacher", id);
         session.close();
-        return students;
+        return teacher;
     }
 
 }

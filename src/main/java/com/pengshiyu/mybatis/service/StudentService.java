@@ -1,4 +1,7 @@
 package com.pengshiyu.mybatis.service;
 
-public class StudentService {
+import com.pengshiyu.mybatis.entity.Student;
+
+public interface StudentService {
+    public Student getById(int id);
 }

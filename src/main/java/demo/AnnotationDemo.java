@@ -1,4 +1,11 @@
 package demo;
 
-public class AnnotationDemeo {
+
+interface Human{
+    public void sayHello();
+    public void sayHi();
 }
+
+
+
+
